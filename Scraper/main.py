@@ -19,7 +19,7 @@ def moduleAvailable(url):
 
 
 def ImportModules():
-    """Imports all modules from /Souces folder. Returns modules available for scraping"""
+    """Imports all modules from /Sources folder. Returns modules available for scraping"""
     importedModules = []
     #Retrives all .py files from Sources
     modules = [file for file in os.listdir('./Sources') if file.endswith('.py')]
@@ -32,9 +32,9 @@ def ImportModules():
     return importedModules
 
 def CollectContent(modules):
-    """Retrives events for each module in a list."""
+    """Retrieves events for each module in a list."""
     collectedEvents = []
-    for module in availableModules: 
+    for module in modules: 
             events = module.getContent()
             if len(events) > 0: collectedEvents.append(events)
         
