@@ -1,0 +1,2 @@
+# Scraper
+basic python scraper
