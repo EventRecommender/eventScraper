@@ -17,10 +17,10 @@ def getContent():
             'img': event.find('img')['src'],
             'url': 'https://studenterhuset.dk' + event.find('a')['href'],
             'title': event.find('a', {'class':'eventlist__link'}).get_text(),
-            'place': None,
+            'place': "aalborg",
             'host': 'Studenter Huset',
             'date': createDate(date, time),
-            'type': None
+            'type': ""
 
         }
         EventList.append(event)
@@ -37,5 +37,5 @@ def findAllByClass(html, type: str, classname: str):
 def createDate(Inputdate, Inputtime):
     split = Inputdate.split('.')
     splittime = Inputtime.split(' ')
-    return split[0] + '-' + split[1] + '-20' + split[2] + ' ' + splittime[1]
+    return '20' + split[2] + '-' + split[1] + '-' + split[0] + ' ' + splittime[1] + ':00'
 

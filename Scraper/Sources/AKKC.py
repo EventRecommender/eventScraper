@@ -29,7 +29,7 @@ def CreateDay(day):
 
 def CreateDate(date):
     splitDate = date.split(' ')
-    return CreateDay(splitDate[1])+'-'+ getMonth(splitDate[2]) + '-'+ splitDate[3] + ' ' + getTime(splitDate[5])
+    return splitDate[3] +'-'+ getMonth(splitDate[2]) +'-'+ CreateDay(splitDate[1]) + ' ' + getTime(splitDate[5] + ':00')
 
 
 def getMonth(str):
