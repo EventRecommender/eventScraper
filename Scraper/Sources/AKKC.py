@@ -14,7 +14,7 @@ def getContent():
             currentEvent = {
                 'img': 'https://akkc.dk'+ event.find('img')['src'],
                 'title': event.find('span', {'class': 'name'}).get_text(),
-                'place': event.find('span', {'class': 'place'}).get_text(),
+                'place': "aalborg",
                 'host':  'AKKC',
                 'date': CreateDate(event.find('span', {'class': 'date-and-time'}).get_text()),
                 'type': event.find('span',{'class': 'genre'}).get_text(),
